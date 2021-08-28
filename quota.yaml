@@ -3,10 +3,8 @@ kind: ResourceQuota
 metadata:
   name: dojo-jump
 spec:
-  resources:
-    requests:
-      memory: "2Gi"
-      cpu: "2"
-    limits:
-      memory: "4Gi"
-      cpu: "4"
+  scopeSelector:
+    requests.cpu: "2"
+    requests.memory: 2Gi
+    limits.cpu: "4"
+    limits.memory: 4Gi
